@@ -25,7 +25,7 @@
 * 
 */
 
-include "php/credentials.php";
+include "./credentials.php";
 
 class OCTAPI {
 

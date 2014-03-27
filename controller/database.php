@@ -25,7 +25,7 @@
 * 
 */
 
-include "php/credentials.php";
+include "./credentials.php";
 
 /**
  * Description of database
@@ -40,7 +40,7 @@ class DATABASE {
     function __construct($url, $user, $pass, $name) {
         $this->start($url, $user, $pass, $name);
         $this->m_debug = false;
-    }
+    
 
     function setDebugMode($mode) {
         $this->m_debug = $mode;

@@ -24,8 +24,8 @@
  * THE SOFTWARE.
  * 
  */
-include "php/credentials.php";
-include "php/database.php";
+include "controller/credentials.php";
+include "controller/database.php";
 
 header('Content-type: application/javascript; charset=utf-8;gzip;');
 
