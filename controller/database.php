@@ -37,8 +37,8 @@ class DATABASE {
     var $m_database;
     var $m_debug;
 
-    function __construct($url, $user, $pass, $name) {
-        $this->start($url, $user, $pass, $name);
+    function __construct($url, $user, $pass, $name, $port) {
+        $this->start($url, $user, $pass, $name, $port);
         $this->m_debug = false;
     }   
 
@@ -46,9 +46,9 @@ class DATABASE {
         $this->m_debug = $mode;
     }
 
-    function start($url, $user, $pass, $name) {
+    function start($url, $user, $pass, $name, $port) {
     // Create connection
-        $this->m_database = mysqli_connect($url, $user, $pass, $name);
+        $this->m_database = mysqli_connect($url, $user, $pass, $name, $port);
 
     // Check connection
         if (mysqli_connect_errno()) {
