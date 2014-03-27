@@ -40,7 +40,7 @@ class DATABASE {
     function __construct($url, $user, $pass, $name) {
         $this->start($url, $user, $pass, $name);
         $this->m_debug = false;
-    
+    }   
 
     function setDebugMode($mode) {
         $this->m_debug = $mode;
@@ -153,5 +153,6 @@ class DATABASE {
         $result = $this->query($sql);
         return $result;
     }
+
 
 }
