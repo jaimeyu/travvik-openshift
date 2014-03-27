@@ -25,8 +25,8 @@
 * 
 */
 
-include "php/octapi.php";
-include "php/database.php";
+include "controller/octapi.php";
+include "controller/database.php";
 
 // Enable page compression
 ob_start("ob_gzhandler");
