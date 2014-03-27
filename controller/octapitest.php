@@ -25,7 +25,7 @@
 * 
 */
 
-include "./database.php";
+include "database.php";
 include "octapi.php";
 
 // Enable page compression

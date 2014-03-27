@@ -26,7 +26,7 @@
 */
 
 
-include "./database.php";
+include "database.php";
 
 $database = new DATABASE($DB_URL, $DB_USER, $DB_PASS, $DB_NAME);
 $database->setDebugMode(true);
