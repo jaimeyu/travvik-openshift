@@ -34,6 +34,6 @@ $OC_TRANSPO_STOP_DETAILS_URL = "https://api.octranspo1.com/v1.1/GetRouteSummaryF
 
 $DB_PASS = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
 $DB_USER = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
-$DB_URL = getenv('OPENSHIFT_MYSQL_DB_HOST');
+$DB_URL = getenv('OPENSHIFT_MYSQL_DB_URL');
 $DB_NAME = getenv('OPENSHIFT_GEAR_NAME');
 ?>
