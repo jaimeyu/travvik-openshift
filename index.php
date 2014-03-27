@@ -25,6 +25,9 @@
 * 
 */
 
+/* Debugging only for openshift! */
+error_reporting(22527);
+
 include "controller/octapi.php";
 include "controller/database.php";
 
