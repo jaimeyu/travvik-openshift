@@ -115,7 +115,7 @@ $pullFromCacheStr = "None";
 
 $page = file_get_contents("webview/index.template.html");
 
-$database = new DATABASE($DB_URL, $DB_USER, $DB_PASS, $DB_TBL_NAME);
+$database = new DATABASE($DB_URL, $DB_USER, $DB_PASS, $DB_TBL_NAME, $DB_PORT);
 if ($stopno != -1) {
 
     //print "<!-- Getting individual bus times for stop... -->";
