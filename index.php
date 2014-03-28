@@ -208,7 +208,7 @@ if ($stopno != -1) {
 } else if ($user_lat != -1 && $user_long != -1 && $routeno == -1 && $stopno == -1) {
 
     //print "<!-- Getting route details for stop... -->";
-    $database = new DATABASE($DB_URL, $DB_USR_USER, $DB_PASS, $DB_TBL_NAME, $DB_PORT);
+    $database = new DATABASE($DB_URL, $DB_USER, $DB_PASS, $DB_TBL_NAME, $DB_PORT);
     
     $searchRadius = 0.000;
     $result = array();
