@@ -78,10 +78,17 @@ class OCTAPI {
 
     function pullSoapData($soap) {
 
-        $this->dataset = simplexml_load_string($soap);
-        //$this->registerXPathNamespace("soap", "http://schemas.xmlsoap.org/soap/envelope/");
-        $this->dataset->registerXPathNamespace('soap', 'envelope.xml');
-        $this->dataset = $this->dataset->xpath('/soap:Envelope/soap:Body');
+        try{
+            $this->dataset = simplexml_load_string($soap);
+            //$this->registerXPathNamespace("soap", "http://schemas.xmlsoap.org/soap/envelope/");
+            $this->dataset->registerXPathNamespace('soap', 'envelope.xml');
+            $this->dataset = $this->dataset->xpath('/soap:Envelope/soap:Body');
+        }
+        catch(Exception $e){
+            echo 'Caught exception: ',  $e->getMessage(), "\n";
+            ob_end_clean();
+            exit(0);
+        }
         $this->dataset = $this->dataset[0];
 
         if ($this->dataset->GetNextTripsForStopResponse->getName() != "") {
