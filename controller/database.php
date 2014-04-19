@@ -37,23 +37,18 @@ class DATABASE {
     var $m_database;
     var $m_debug;
 
-    function __construct($url, $user, $pass, $name) {
-        $this->start($url, $user, $pass, $name);
+    function __construct($url, $user, $pass, $name, $port) {
         $this->m_debug = false;
+        $this->m_database = mysqli_connect($url, $user, $pass, $name, $port);
+        if (mysqli_connect_errno()) {
+            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+            throw new Exception('Can\'t access database.');
+        }
+
     }   
 
     function setDebugMode($mode) {
         $this->m_debug = $mode;
-    }
-
-    function start($url, $user, $pass, $name) {
-    // Create connection
-        $this->m_database = mysqli_connect($url, $user, $pass, $name);
-
-    // Check connection
-        if (mysqli_connect_errno()) {
-            echo "Failed to connect to MySQL: " . mysqli_connect_error();
-        }
     }
 
     function query($cmd) {

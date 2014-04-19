@@ -115,13 +115,14 @@ $pullFromCacheStr = "None";
 
 $page = file_get_contents("webview/index.template.html");
 
+$database = new DATABASE($DB_URL, $DB_USER, $DB_PASS, $DB_TBL_NAME, $DB_PORT);
 if ($stopno != -1) {
 
     //print "<!-- Getting individual bus times for stop... -->";
 // Our the OC Transpo utility class.
     $curBus = new OCTAPI;
 // Check database if already in cache
-    $database = new DATABASE($DB_URL, $DB_USER, $DB_PASS, $DB_NAME);
+//    $database = new DATABASE($DB_URL, $DB_USER, $DB_PASS, $DB_TBL_NAME);
 //$database->m_debug = false;
     $result = $database->getTripInCache($routeno, $stopno);
     if (mysqli_num_rows($result) == 0) {
@@ -208,7 +209,7 @@ if ($stopno != -1) {
 } else if ($user_lat != -1 && $user_long != -1 && $routeno == -1 && $stopno == -1) {
 
     //print "<!-- Getting route details for stop... -->";
-    $database = new DATABASE($DB_URL, $DB_USER, $DB_PASS, $DB_NAME);
+    //$database = new DATABASE($DB_URL, $DB_USER, $DB_PASS, $DB_TBL_NAME, $DB_PORT);
     
     $searchRadius = 0.000;
     $result = array();
