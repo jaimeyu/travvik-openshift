@@ -149,6 +149,7 @@ class OCTAPI {
 
     function getTripsInDirection($routeIndex, $direction) {
         $nbItems = $this->getNbOfTrips($routeIndex);
+        $count;
         foreach ($this->busRoute as $item) {
             //if ($item->Trips)
         }
