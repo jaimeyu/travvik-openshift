@@ -99,7 +99,7 @@ class STOP_SEARCH {
 
 }
 
-$dbSearch = new STOP_SEARCH(new DATABASE($DB_URL, $DB_USER, $DB_PASS, $DB_NAME));
+$dbSearch = new DATABASE($DB_URL, $DB_USER, $DB_PASS, $DB_TBL_NAME, $DB_PORT);
 
 $searchStr = filter_input(INPUT_GET, 'q', FILTER_SANITIZE_STRING);
 

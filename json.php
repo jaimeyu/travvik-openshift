@@ -59,7 +59,7 @@ if (isset($_GET ["debug"])) {
 }
 
 // Check database if already in cache
-$database = new DATABASE($DB_URL, $DB_USER, $DB_PASS, $DB_NAME);
+$database = new DATABASE($DB_URL, $DB_USER, $DB_PASS, $DB_TBL_NAME, $DB_PORT);
 //$database->m_debug = false;
 $result = $database->getTripInCache($routeno, $stopno);
 if (mysqli_num_rows($result) == 0) {

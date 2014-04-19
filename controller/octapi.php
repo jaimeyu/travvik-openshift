@@ -147,14 +147,6 @@ class OCTAPI {
         return 0;
     }
 
-    function getTripsInDirection($routeIndex, $direction) {
-        $nbItems = $this->getNbOfTrips($routeIndex);
-        $count;
-        foreach ($this->busRoute as $item) {
-            //if ($item->Trips)
-        }
-    }
-
     // Print to JSON
     function generate_jsonp($data) {
         if (preg_match('/\W/', @$_GET['callback'])) {

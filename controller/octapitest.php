@@ -39,7 +39,7 @@ if (isset($_REQUEST["long"])) {
     $long = (float) $_REQUEST["long"];
 }
 
-$database = new DATABASE($DB_URL, $DB_USER, $DB_PASS, $DB_NAME);
+$database = new DATABASE($DB_URL, $DB_USER, $DB_PASS, $DB_TBL_NAME, $DB_PORT);
 
 $result = $database->getStopFromLatLong((float) $lat, (float) $long, 0.001);
 //$database->setDebugMode(true);

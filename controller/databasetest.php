@@ -28,7 +28,7 @@
 
 include "database.php";
 
-$database = new DATABASE($DB_URL, $DB_USER, $DB_PASS, $DB_NAME);
+$database = new DATABASE($DB_URL, $DB_USER, $DB_PASS, $DB_TBL_NAME, $DB_PORT);
 $database->setDebugMode(true);
 $result = $database->getStopFromLatLong((int) 45.130103, (int) -75.716354);
 
